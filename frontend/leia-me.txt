@@ -1,0 +1,3 @@
+o arquivo .Env para frontend
+NEXT_PUBLIC_API_URL=http://localhost:8088
+JWT_SECRET=bufos
