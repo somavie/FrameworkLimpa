@@ -18,14 +18,14 @@ export const AuthLayoutWrapper = ({ children }: Props) => {
 
       <div
         className="hidden md:flex flex-1 relative flex items-center justify-center p-6 bg-cover bg-center"
-        style={{ backgroundImage: 'url("/login.png")' }}
+        style={{ backgroundImage: 'url("/login2.png")' }}
       >
         <div className="z-10">
           <h1 className="font-bold text-[45px] text-white">
-            Sistema de Gestão Escolar
+            Nome Do Sistema
           </h1>
           <div className="font-light text-slate-300 mt-4">
-            Desfrute de um Sistema Nacional e feito por Nacionais.
+            Slogan.
           </div>
         </div>
       </div>
