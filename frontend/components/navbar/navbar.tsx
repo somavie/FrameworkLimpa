@@ -20,7 +20,9 @@ export const NavbarWrapper = ({ children }: Props) => {
         <NavbarContent className="md:hidden">
           <BurguerButton />
         </NavbarContent>
-        <NavbarContent className="w-full max-md:hidden" justify="center"><h3 className="text-xl font-semibold">Escola Nº 9876 Missão Envangelica Chilume</h3></NavbarContent>
+        <NavbarContent className="w-full max-md:hidden" justify="center">
+          <h3 className="text-xl font-semibold">Nome do sistema</h3>
+        </NavbarContent>
         <NavbarContent
           justify="end"
           className="w-fit data-[justify=end]:flex-grow-0"

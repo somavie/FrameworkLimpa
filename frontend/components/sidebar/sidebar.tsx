@@ -55,58 +55,19 @@ export const SidebarWrapper = () => {
               <>
                 {/* Módulo: Administração Escolar */}
                 <CollapseItems
-                  title="Administração Escolar"
+                  title="Geral"
                   icon={<IdentificationIcon />}
                   items={[
-                    {
-                      label: "Alunos",
-                      href: "/alunos", // Alias
-                      icon: <SchoolIcon />,
-                    },
-                    {
-                      label: "Horários e Calendários",
-                      href: "/horarios", // Alias
-                      icon: <Calendar />,
-                    },
-                    {
-                      label: "Turmas",
-                      href: "/turmas", // Alias
-                      icon: <ClipboardListIcon />,
-                    },
-                    {
-                      label: "Professores",
-                      href: "/professores", // Alias
-                      icon: <ClipboardListIcon />,
-                    },
                     {
                       label: "Pessoas",
                       href: "/pessoas", // Alias
                       icon: <Users />,
                     },
-                    {
-                      label: "Encarregado",
-                      href: "/encarregado", // Alias
-                      icon: <Users />,
-                    },
-                    {
-                      label: "Funcionários",
-                      href: "/funcionarios", // Alias
-                      icon: <BriefcaseIcon />,
-                    },
+
                     {
                       label: "Endereços",
                       href: "/enderecos", // Alias
                       icon: <MapPinIcon />,
-                    },
-                    {
-                      label: "Emitir Boletins",
-                      href: "/boletins", // Alias
-                      icon: <ReportsIcon />,
-                    },
-                    {
-                      label: "Disciplinas",
-                      href: "/disciplinas", // Alias
-                      icon: <BookOpenIcon />,
                     },
                   ]}
                 />
@@ -129,106 +90,20 @@ export const SidebarWrapper = () => {
                       href: "/tipo-usuario", // Alias
                       icon: <UserCheckIcon />,
                     },
-
-                    {
-                      label: "Configurações",
-                      href: "/configuracoes", // Alias
-                      icon: <SettingsIcon />,
-                    },
                   ]}
                 />
               </>
             )}
 
-            {/* Módulo: Professor */}
-            {(tipoUser === "Professor" || tipoUser === "Admin") && (
-              <CollapseItems
-                title="Professor"
-                icon={<ReportsIcon />}
-                items={[
-                  {
-                    label: "Minhas Turmas",
-                    href: "/minhasTurmas", // Alias
-                    icon: <ClipboardListIcon />,
-                  },
-
-                  {
-                    label: "Avaliar Turmas",
-                    href: "/Prova", // Alias
-                    icon: <ClipboardListIcon />,
-                  },
-                ]}
-              />
-            )}
-
             {/* Módulo: Aluno/Encarregado */}
             {tipoUser === "Admin" && (
               <CollapseItems
-                title="Aluno/Encarregado"
+                title="Minha Conta"
                 icon={<ReportsIcon />}
                 items={[
-                  {
-                    label: "Consultar Notas",
-                    href: "/consultar-notas", // Alias
-                    icon: <ReportsIcon />,
-                  },
-                  {
-                    label: "Consultar Faltas",
-                    href: "/consultar-faltas", // Alias
-                    icon: <ReportsIcon />,
-                  },
                   {
                     label: "Perfil",
                     href: "/profile",
-                    icon: <ReportsIcon />,
-                  },
-                ]}
-              />
-            )}
-
-            {/* Módulo: Relatórios e Estatísticas */}
-            {tipoUser === "Admin" && (
-              <CollapseItems
-                title="Relatórios e Estatísticas"
-                icon={<ReportsIcon />}
-                items={[
-                  {
-                    label: "Relatórios de Desempenho",
-                    href: "/relatorios-desempenho", // Alias
-                    icon: <ReportsIcon />,
-                  },
-                  {
-                    label: "Estatísticas de Presenças",
-                    href: "/estatisticas-presencas", // Alias
-                    icon: <ReportsIcon />,
-                  },
-                ]}
-              />
-            )}
-            {/* Módulo: Biblioteca */}
-            {(tipoUser === "Bibliotecario" || tipoUser === "Admin") && (
-              <CollapseItems
-                title="Biblioteca"
-                icon={<BookAIcon />}
-                items={[
-                  {
-                    label: "Livros",
-                    href: "/livros", // Alias
-                    icon: <ReportsIcon />,
-                  },
-                ]}
-              />
-            )}
-
-            {/* Módulo: Meios */}
-            {(tipoUser === "Bibliotecario" || tipoUser === "Admin") && (
-              <CollapseItems
-                title="Meios"
-                icon={<BookAIcon />}
-                items={[
-                  {
-                    label: "Meio",
-                    href: "/meios", // Alias
                     icon: <ReportsIcon />,
                   },
                 ]}

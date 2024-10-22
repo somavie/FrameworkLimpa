@@ -1,0 +1,9 @@
+quando usar o backend deves criar a um arquivo .env ode colocaras o seguinte:
+
+DB_HOST=localhost 
+DB_USER=root
+DB_PASSWORD=tua senha ex: *+///800255/
+DB_NAME=nome do banco de dados ex: sge
+JWT_SECRET=senha secreta do token ex: Bufo 
+PORT=porta do servidor ex:8088
+CLIENT_ORIGIN=*

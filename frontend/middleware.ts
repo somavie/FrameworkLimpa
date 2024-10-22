@@ -8,12 +8,9 @@ const routeAliases: Record<string, string> = {
   "/pessoas": "/admEscolar/gPessoa/pessoa",
 
   "/enderecos": "/admEscolar/gPessoa/endereco",
-  "/disciplinas": "/admEscolar/disciplina",
+
   "/usuarios": "/admin/accounts",
   "/tipo-usuario": "/admin/gUsuarios/tipousuario",
-  "/bloqueio-usuario": "/admin/configuracoes/bloqueioUsuario",
-  "/redefinir-usuario": "/admin/configuracoes/redefinirUsuario",
-  "/configuracoes": "/admin/configuracao",
 
   "/perfil": "/profile",
 };
@@ -43,9 +40,6 @@ export function middleware(request: NextRequest) {
 
     "/admin/accounts",
     "/admin/gUsuarios/tipousuario",
-    "/admin/configuracoes/bloqueioUsuario",
-    "/admin/configuracoes/redefinirUsuario",
-    "/admin/configuracao",
 
     "/profile",
   ];
@@ -63,7 +57,13 @@ export function middleware(request: NextRequest) {
     const accessControl: Record<string, string[]> = {
       Admin: protectedRoutes,
 
-      Operador: ["/admEscolar/gPessoa/endereco", "/profile"],
+      Operador: [
+        "/admEscolar/gPessoa/pessoa",
+
+        "/admEscolar/gPessoa/endereco",
+
+        "/profile",
+      ],
     };
 
     // Redireciona se o usuário tentar acessar uma rota sem permissão
@@ -95,9 +95,6 @@ export const config = {
 
     "/usuarios",
     "/tipo-usuario",
-    "/bloqueio-usuario",
-    "/redefinir-usuario",
-    "/configuracoes",
 
     "/perfil",
 

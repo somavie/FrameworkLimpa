@@ -3,10 +3,22 @@ const nextConfig = {
   reactStrictMode: true,
   images: {
     domains: ["i.pravatar.cc", process.env.NEXT_PUBLIC_API_URL, "localhost"], // Adiciona o domínio i.pravatar.cc e seu domínio de API
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "i.pravatar.cc",
+        pathname: "**",
+      },
+    ],
   },
   async rewrites() {
     return [
       // Rotas de Administração Escolar
+
+      {
+        source: "/alunos/:alunoId",
+        destination: "/admEscolar/gMatriculas/alunos/:alunoId",
+      },
 
       {
         source: "/pessoas",
@@ -27,18 +39,20 @@ const nextConfig = {
         source: "/tipo-usuario",
         destination: "/admin/gUsuarios/tipousuario",
       },
+
+      // Rotas do Professor
+
+      // Rotas do Aluno/Encarregado
+
       {
-        source: "/bloqueio-usuario",
-        destination: "/admin/configuracoes/bloqueioUsuario",
+        source: "/perfil",
+        destination: "/profile",
       },
-      {
-        source: "/redefinir-usuario",
-        destination: "/admin/configuracoes/redefinirUsuario",
-      },
-      {
-        source: "/configuracoes",
-        destination: "/admin/configuracao",
-      },
+      // Rotas de Meios
+
+      // Rotas de Biblioteca
+
+      // Rotas de Relatórios e Estatísticas
     ];
   },
 };
